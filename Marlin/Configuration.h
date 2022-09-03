@@ -653,13 +653,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  21.73,  21.73 }
-    #define DEFAULT_Ki_LIST {   1.54,   1.54 }
-    #define DEFAULT_Kd_LIST {  76.55,  76.55 }
+    #define DEFAULT_Kp_LIST {  32.99,  32.99 }
+    #define DEFAULT_Ki_LIST {   3.08,   3.08 }
+    #define DEFAULT_Kd_LIST {  88.40,  88.40 }
   #else
-    #define DEFAULT_Kp  30.57
-    #define DEFAULT_Ki   2.69
-    #define DEFAULT_Kd  86.81
+    #define DEFAULT_Kp  32.99
+    #define DEFAULT_Ki   3.08
+    #define DEFAULT_Kd  88.40
   #endif
 #endif
 
@@ -742,9 +742,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 100.52
-  #define DEFAULT_bedKi 19.63
-  #define DEFAULT_bedKd 343.11
+  #define DEFAULT_bedKp 96.05
+  #define DEFAULT_bedKi 17.66
+  #define DEFAULT_bedKd 348.36
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -801,7 +801,7 @@
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
   //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of flash)
-  //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
+  #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
 #endif
 
 // @section safety
